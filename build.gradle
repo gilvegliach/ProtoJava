@@ -1,4 +1,14 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+    }
+}
+
 apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 repositories {
     jcenter()
@@ -7,4 +17,10 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.9.5'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'it.gilvegliach.protojava.Main'
+    }
 }

@@ -6,3 +6,7 @@ Tech stack:
 - Gradle
 - Mockito
 - JUnit
+
+# Build and run
+    ./gradlew shadowJar
+    java -jar build/libs/proto-java-all.jar [args]
